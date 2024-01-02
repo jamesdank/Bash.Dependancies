@@ -12,32 +12,32 @@ function banner.dependancies () {
 
         read -rp "Option: " menu 
 
-        case "$menu" in 
+            case "$menu" in 
 
-        install)
-        echo -e "\nInstalling $i...\n" ;
-        sleep 2 ;
+            install)
+            echo -e "\nInstalling $i...\n" ;
+            sleep 2 ;
 
-        sudo apt install "$i" -y ;
-        sleep 2 ;
+            sudo apt install "$i" -y ;
+            sleep 2 ;
 
-        clear ;
+            clear ;
 
-        echo -e "\n$i installed, program will restart...\n" ;
-        sleep 2 ;
+            echo -e "\n$i installed, program will restart...\n" ;
+            sleep 2 ;
 
-        #change 
-        banner.dependancies ;;
+            #change 
+            banner.dependancies ;;
 
-        exit)
-        clear ;
-        exit ;; 
+            exit)
+            clear ;
+            exit ;; 
 
-        *) 
-        echo -e "${red}Wrong option${nc}" ;;
-        esac
-        }
-        done
+            *) 
+            echo -e "${red}Wrong option${nc}" ;;
+            esac
+            }
+    done
 }
 
 banner.dependancies
